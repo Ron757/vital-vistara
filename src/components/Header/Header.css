@@ -1,0 +1,44 @@
+nav{
+    background : white;
+    height: 5rem;
+    display:grid;
+    place-items:center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid black;
+    z-index: 100;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.nav-logo h3{
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.nav-logo h3 span{
+    color: violet;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap:3rem;
+}
+.nav-menu li a{
+    color: black;
+}
+.nav-menu li a:hover{
+    color: lightgreen;
+    text-decoration: underline;
+    transition: 2ms;
+}
+.nav-toggle-button{
+    background:transparent;
+    color: white;
+    display: none;
+}
