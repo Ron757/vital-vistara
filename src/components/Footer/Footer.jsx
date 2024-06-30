@@ -25,9 +25,9 @@ function Footer() {
           <div className="social">
             <h4 className='footer-heading'>Social Media</h4>
             <ul>
-              <li><Link to={" https://linkedin.com/company/vitalvistara"} target="_blank">LinkedIn</Link></li>
-              <li><Link to={" https://x.com/vitalvistara"} target="_blank">Twitter</Link></li>
-              <li><Link to={" https://www.instagram.com/vitalvistara/"} target="_blank" >Instagram</Link></li>
+              <li><a href={" https://linkedin.com/company/vitalvistara"} target="_blank">LinkedIn</a></li>
+              <li><a href ={" https://x.com/vitalvistara"} target="_blank">Twitter</a></li>
+              <li><a href ={" https://www.instagram.com/vitalvistara/"} target="_blank" >Instagram</a></li>
             </ul>
           </div>
         </div>
