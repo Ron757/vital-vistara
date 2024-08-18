@@ -1,10 +1,10 @@
-import React,{useState, useEffect} from 'react'
-import { Link ,useLocation} from 'react-router-dom'
-import "./Header.css"
-import Logo from "../../assets/Loges.png";
+import React, { useEffect, useState } from 'react';
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { Link, useLocation } from 'react-router-dom';
+import Logo from "../../assets/Loges.png";
 import WLogo from "../../assets/Logoso.png";
+import "./Header.css";
 
 function Header() {
   const [isHome, setIsHome] = useState(false);
@@ -19,26 +19,27 @@ function Header() {
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+
   return (
     <nav style={{ backgroundColor: isHome ? 'white' : 'black' }}>
-      <div className="container nav-container">
-        <Link className='nav-logo' to ={'/'}>
+      <div className="nav-container">
+        <Link className='nav-logo' to={'/'}>
           <img src={isHome ? WLogo : Logo} alt="" className='Logobg' />
         </Link>
-        <ul className="nav-menu">
+        <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
           <li><Link to={'/'} style={{ color: isHome ? 'black' : 'white' }}>Home</Link></li>
           <li><Link to={'/'} style={{ color: isHome ? 'black' : 'white' }}>Services</Link></li>
           <li><Link to={'/about'} style={{ color: isHome ? 'black' : 'white' }}>About</Link></li>
           <li><Link to={'/'} style={{ color: isHome ? 'black' : 'white' }}>Career</Link></li>
           <li><Link to={'/contact'} style={{ color: isHome ? 'black' : 'white' }}>Contact Us</Link></li>
-          <li ><Link to={'/contact'} style={{ color: isHome ? 'white' : 'black', backgroundColor: isHome ? 'black' : 'white'  }} className='above'>Book a Call</Link></li>
+          <li><Link to={'/contact'} style={{ color: isHome ? 'white' : 'black', backgroundColor: isHome ? 'black' : 'white' }} className='above'>Book a Call</Link></li>
         </ul>
         <button className='nav-toggle-button btn btn-primary' onClick={handleMenuToggle}>
           {menuOpen ? <IoMdClose /> : <FaBars />}
         </button>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;

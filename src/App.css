@@ -1,92 +1,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
 }
 
-body{
+body {
   background-color: white;
-  font-size:16px;
+  font-size: 16px;
   color: black;
-  font-family: 'MontSerrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
-ul li{
+
+ul li {
   list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
   color: black;
   line-height: 1.1;
 }
-h1{
+
+h1 {
   font-size: 2.2rem;
 }
-h2{
+
+h2 {
   font-size: 1.9rem;
 }
-h3{
+
+h3 {
   font-size: 1.3rem;
   line-height: 1.25;
 }
-h4{
-  font-size: 1.1rem;
 
+h4 {
+  font-size: 1.1rem;
 }
-h5{
+
+h5 {
   line-height: 1.4;
 }
 
-section{
+section {
   margin-top: 5rem;
 }
-.container{
-  width:90%;
+
+.container {
+  width: 90%;
   margin: 0 auto;
   max-width: 1800px;
 }
-.btn{
+
+/* Button Styles */
+.btn {
   display: inline-block;
   width: fit-content;
-  
   padding: 0.8rem 2.4rem;
   border-radius: 10px;
-  background: #f6f6f6;;
+  background: #f6f6f6;
   font-weight: 500;
-  cursor:pointer;
+  cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0px 0px 8px 0px rgba(106.49999999999999, 106.49999999999999, 106.49999999);
-  /* background: #000; */
+  box-shadow: 0px 0px 8px 0px rgba(106, 106, 106, 0.5);
 }
-.btn-primary{
+
+.btn-primary {
   background: purple;
   color: white;
 }
-.btn-category{
+
+.btn-category {
   background: lightgreen;
   color: white;
   font-size: .85rem;
   font-weight: 400;
 }
-.btn-sm{
+
+.btn-sm {
   font-size: .9rem;
   padding: .4rem .8rem;
   font-weight: 500;
 }
-.btn-danger{
+
+.btn-danger {
   background: red;
   color: white;
 }
-.btn:hover{
-  box-shadow: 6px 4px 6px 4px rgba(60,64,67,0.3) , 6px 4px 6px 4px rgba(60,64,67,0.15);
 
+.btn:hover {
+  box-shadow: 6px 4px 6px 4px rgba(60, 64, 67, 0.3), 6px 4px 6px 4px rgba(60, 64, 67, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  section {
+    margin-top: 3rem;
+  }
 }
